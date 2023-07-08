@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    color: hsl(224, 30%, 27%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+    width: 35em;
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 30px;
+    box-shadow: 24px 25px 70px -42px rgba(0,0,0,0.48);
+}
+
+article{
+    border-radius: 30px;   
+}
+
+h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.purple-box{
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    width: 50%;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.purple-box h1{
+    color: hsl(241, 100%, 89%);
+    margin-top: 7px;
+    margin-bottom: 12px;
+}
+
+.score{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    margin: 15px auto;
+}
+
+.score h2{
+    font-size: 50px;
+    font-weight: 800;
+    margin:0;
+}
+
+.score p{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    color: hsl(241, 100%, 89%);
+}
+
+.results{
+    margin: 10px;
+}
+
+.results p{
+    font-size: 16px;
+    color: hsl(241, 100%, 89%);
+    margin: 15px;
+}
+
+.white-box{
+    width:50%;
+    padding: 1em;
+    display:flex;
+    flex-direction: column; 
+}
+
+.white-box h1{
+    margin-top: 7px;
+    margin-bottom: 10px;
+    padding-left: 12px;
+}
+
+.white-box section{
+    width: calc(100% - 20px);
+    height: 50px;
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 7px auto;
+    padding-top: 14px;
+}
+
+.reaction .variant{
+    color: hsl(0, 100%, 67%);
+}
+
+.reaction{
+    background-color: hsl(0, 100%, 67%, 5%);
+}
+
+.memory .variant{
+    color: hsl(39, 100%, 56%);
+}
+
+.memory{
+    background-color: hsl(39, 100%, 56%, 5%);
+}
+
+.verbal .variant{
+    color: hsl(166, 100%, 37%);
+}
+
+.verbal{
+    background-color: hsl(166, 100%, 37%, 5%);
+}
+
+.visual .variant{
+    color: hsl(234, 85%, 45%);
+}
+
+.visual{
+    background-color: hsl(234, 85%, 45%, 5%);
+}
+
+.points{
+    padding-left:50px;
+    color: hsl(241, 100%, 89%);
+}
+
+.visual .points, .verbal .points{
+    margin-left: 10px;
+}
+
+span{
+    font-weight: 700;
+    color: hsl(224, 30%, 27%);
+}
+
+button{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 30px;
+    width: 90%;
+    height: 50px;
+    color: hsl(241, 100%, 89%);
+    background-color: hsl(224, 30%, 27%);
+    margin: 10px 10px 12px 12px;
+    margin-top: 2em;
+    font-weight: 700;
+}
+
+button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, hsl(221, 100%, 70%), hsl(241, 100%, 60%));
+}
+
+.attribution{
+    text-align: center;
+    margin: 10px;
+}
+
+.attribution a{
+    color: hsl(241, 100%, 89%);
+}
+
+@media (max-width: 375px) {
+    body {
+      margin: 0;
+      min-height: fit-content;
+      overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    }
+  
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: none;
+      width: 100vw;
+      height: auto;
+      border-radius: 0; /* Elimina el redondeo de las esquinas */
+    }
+
+    article{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .purple-box{
+        background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        width: 100%;
+        color: white;
+        padding: 2em;
+        padding-bottom: 0;
+        padding-top:0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .white-box{
+        width:100%;
+    }
+  }
